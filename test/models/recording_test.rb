@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RocordingTest < ActiveSupport::TestCase
+class RecordingTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

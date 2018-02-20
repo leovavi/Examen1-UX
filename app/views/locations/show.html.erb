@@ -10,6 +10,27 @@
           | <%= link_to "Edit", edit_location_path(@location) %> 
           | <%= link_to "Delete", location_path(@location), method: :delete, 
                 data: {confirm: 'Are you sure?'} %>
+          |  <%= link_to "Agregar Recording", new_location_recording_path(@location) %>
+        <% end %>
+
+        <% if @location.recordings.any? %>
+            <div>
+                <h2>Recording: </h2>
+                <table border="2">
+                    <thead>
+                        <th>Temperatura</th>
+                        <th>Estado</th>
+                <th>
+
+                </th>
+                    </thead>
+                    <tbody>
+                        <%= render @location.recordings%>
+                    </tbody>
+                </table>
+            </div>
+        <% else %>
+            <p><em>No hay recordings.</em></p>
         <% end %>
     </p>
   </div>

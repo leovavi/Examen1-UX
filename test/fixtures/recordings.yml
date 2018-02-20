@@ -2,10 +2,12 @@
 
 one:
   location: 
+  user: 
   temp: 1
   status: MyString
 
 two:
   location: 
+  user: 
   temp: 1
   status: MyString

@@ -1,7 +1,8 @@
-class CreateRocordings < ActiveRecord::Migration[5.1]
+class CreateRecordings < ActiveRecord::Migration[5.1]
   def change
-    create_table :rocordings do |t|
+    create_table :recordings do |t|
       t.references :location
+      t.references :user
       t.integer :temp
       t.string :status
 
