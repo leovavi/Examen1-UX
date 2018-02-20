@@ -1,1 +1,4 @@
-<h1> Index </h1>
+<% @locations.each do |post| %>
+    <h2><%= link_to post.title, post %></h2>
+    <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
+<% end %>

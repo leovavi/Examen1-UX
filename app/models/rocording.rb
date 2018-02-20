@@ -1,2 +1,0 @@
-class Rocording < ApplicationRecord
-end
