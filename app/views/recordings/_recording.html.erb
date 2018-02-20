@@ -1,0 +1,5 @@
+<tr>
+    <td><%= recording.temp %></td>
+    <td><%= recording.status %></td>
+  <td><%= link_to "Borrar", location_recording_path(recording.location, recording), method: :delete, data: {confirm: "Are You Sure?"}  %></td>
+</tr>

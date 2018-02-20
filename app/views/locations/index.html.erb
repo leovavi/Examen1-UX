@@ -1,4 +1,25 @@
 <% @locations.each do |location| %>
     <h2><%= link_to location.name, location %></h2>
     <p><%= location.created_at.strftime("%B, %d, %Y") %></p>
+    <div>
+    	<h2>Recording: </h2>
+        <table border="2">
+            <thead>
+                <th>Temperatura</th>
+                <th>Estado</th>
+        <th>
+
+        </th>
+            </thead>
+            <tbody>
+                <% location.recordings.each do |rec| %>
+                 <tr>
+                     <td><%= rec.temp %></td>
+                     <td><%= rec.status %></td>
+                     <td><%= link_to "Borrar", location_recording_path(rec.location, rec), method: :delete, data: {confirm: "Estas Seguro?"}  %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
 <% end %>

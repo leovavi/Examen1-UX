@@ -18,6 +18,13 @@ class RecordingsController < ApplicationController
 		@recording = @location.recordings.build
 	end
 
+	def destroy
+	  @location = Location.find(params[:location_id])
+	  @recording = @location.recordings.find(params[:id])
+	  @recording.destroy
+	  redirect_to @location
+	end
+
 	private
 		def recordings_params
 			params.require(:recording).permit(:temp, :status)
