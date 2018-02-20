@@ -1,4 +1,4 @@
-<% @locations.each do |post| %>
-    <h2><%= link_to post.title, post %></h2>
-    <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
+<% @locations.each do |location| %>
+    <h2><%= link_to location.name, location %></h2>
+    <p><%= location.created_at.strftime("%B, %d, %Y") %></p>
 <% end %>
